@@ -78,7 +78,7 @@ header ul li a{
     font-weight: 900;
 }
 .content .text p{
-    color: #333;
+    color: white
 }
 .content .text a{
     display: inline-block;
@@ -150,6 +150,22 @@ header ul li a{
     background-color: red;
     clip-path: circle(600px at right 900px);
 }
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+footer .item ul{
+    padding: 20px 100px;
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+
+}
 @media (max-width: 991px){
    
     header{
@@ -202,6 +218,14 @@ header ul li a{
 .scroll li img{
     display: flex;
     justify-content: center;
+}
+.content .text p {
+    color: #333;
+}
+.icons{
+    background-color: red;
+    padding: 10px;
+    border-radius: 100px;
 }
 }
 
