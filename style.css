@@ -124,6 +124,7 @@ header ul li a{
     position: absolute;
     top: 50%;
     right: 30px;
+    border-radius: 100px;
     transform: translateY(-50%);
     display: flex;
     justify-content: center;
@@ -136,10 +137,7 @@ header ul li a{
 }
 
 .icons li a{
-  display: inline-block;
-  margin: 5px  0;
   filter: invert(1);
-
 }
 .circle{
     position: absolute;
@@ -154,21 +152,96 @@ footer{
     background-color: black;
     color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    text-align: justify;
+    gap: 20px;
+    padding: 30px;
+    
+    
+}
+footer .item{
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   
+}
+footer .item input{
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
 }
 footer .item ul{
     padding: 20px 100px;
     list-style: none;
-    align-items: center;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     gap: 5px;
+}
+.title{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
+.news{
+    margin-top: 30px;
+    justify-content: space-around;
+    display: flex;
+}
+.news .card{
+    
+    height: 600px;
+    width: 400px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    background-color: white;
+}
+.card .top{
+    height: 50%; 
+}
+.card .top img{
+  border-radius: 20px 20px 0px 0px;
+   height: 100%;
+   width: 100%;
+object-fit: cover;
+}
+.card .bottom{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+    text-align: justify;
+}
+.card .bottom button{
+    padding: 20px;
+    width: 250px;
+    background-color: white;
+    border-radius: 100px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title h2{
+    color: white;
+    font-size: 30px;
+}
+.news .card:hover{
+    -webkit-box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
+        transform: translateY(-5px);
+}
+
 @media (max-width: 991px){
-   
+    *{
+        margin: 0;
+        padding: 0;
+    }
     header{
+        width: 100vw;
+        overflow: hidden;
         padding: 20px;
     }
     header .logo{
@@ -186,10 +259,13 @@ footer .item ul{
         padding: 20px 20 120px;
     }
 .content{
+    width: 100%;
+    overflow: hidden;
     margin-top: 100px;
     flex-direction: column;
 }
 .content .text h2{
+
     color: #333;
     font-size: 2.5rem;
 }
@@ -222,10 +298,38 @@ footer .item ul{
 .content .text p {
     color: #333;
 }
-.icons{
-    background-color: red;
-    padding: 10px;
+.icons {
+    position: absolute;
+    top: 50%;
+    right: 30px;
     border-radius: 100px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    background-color: red;
+}
+.icons li{
+    padding: 10px;
+     
+    transform: translateX(-20px);
+}
+footer{
+    display:grid;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    flex-wrap: wrap;
+}
+footer .item1{
+  display: none;
+}
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 }
 
